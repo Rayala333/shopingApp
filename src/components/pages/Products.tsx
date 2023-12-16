@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../css/Product.css'
 
-import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardLink,MDBCardFooter} from 'mdb-react-ui-kit';
+import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardLink} from 'mdb-react-ui-kit';
 import { useAppDispatch,useAppSelecter } from '../redux/hooks';
 import { getProducts,addtoCart } from '../redux/ProductSlice';
 

@@ -5,8 +5,8 @@ import {MDBNavbar,MDBContainer,MDBIcon,MDBNavbarNav,MDBNavbarItem,MDBNavbarToggl
     MDBNavbarLink,MDBBtn,MDBBadge } from 'mdb-react-ui-kit';
 
 import { NavLink } from 'react-router-dom';
-import { useAppDispatch,useAppSelecter } from '../redux/hooks';
-import { getProducts,searchProduct } from '../redux/ProductSlice';
+import { useAppDispatch} from '../redux/hooks';
+import { searchProduct } from '../redux/ProductSlice';
 
 const Header = () => {
 
