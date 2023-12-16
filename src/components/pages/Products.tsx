@@ -10,7 +10,7 @@ const Products = () => {
     const dispatch = useAppDispatch()
 
     const products  = useAppSelecter((state)=>state.products)
-    const {items,searchData} = products
+    const {loading,items,searchData} = products
 
     // console.log(items,"item")
     
@@ -28,7 +28,7 @@ const Products = () => {
   return (
     <>
     {
-        // loading? <h1 style={{display:"flex",justifyContent:"center",height:"100vh",alignItems:"center"}}>Loading...</h1> : 
+        loading? <h1 style={{display:"flex",justifyContent:"center",height:"100vh",alignItems:"center"}}>Loading...</h1> : 
         <>
           <div className='d-none d-lg-block d-xl-block d-md-block'>
             <div className='container '>
