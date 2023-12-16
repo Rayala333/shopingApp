@@ -4,7 +4,7 @@ import '../css/Header.css'
 import {MDBNavbar,MDBContainer,MDBIcon,MDBNavbarNav,MDBNavbarItem,MDBNavbarToggler,MDBCollapse,
     MDBNavbarLink,MDBBtn,MDBBadge } from 'mdb-react-ui-kit';
 
-
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
 
@@ -38,16 +38,16 @@ const Header = () => {
                     <input type='search' className='form-control ' placeholder='Type query' 
                     aria-label='Search'  />
                 </form>
-
-                <MDBBtn size='lg' floating style={{ backgroundColor: '#ac2bac' }}  >
-                    <MDBIcon fas icon="shopping-basket" size='2x' />
-                    
-                    <MDBBadge color='danger' notification pill className='position-absolute  top-50  start-75 translate-middle  bg-danger border border-light rounded-circle'>
-                        0
+                <NavLink to='/cart'>
+                    <MDBBtn size='lg' floating style={{ backgroundColor: '#ac2bac' }}  >
+                        <MDBIcon fas icon="shopping-basket" size='2x' />
                         
-                    </MDBBadge>
-                </MDBBtn>
-
+                        <MDBBadge color='danger' notification pill className='position-absolute  top-50  start-75 translate-middle  bg-danger border border-light rounded-circle'>
+                            0
+                            
+                        </MDBBadge>
+                    </MDBBtn>
+                </NavLink>
             </MDBContainer>
         </MDBNavbar>
 
