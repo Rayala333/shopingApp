@@ -24,7 +24,9 @@ const Header = () => {
         <MDBNavbar expand='lg' light bgColor='light' className='d-none d-lg-block d-xl-block d-md-block sticky-top'>
             <MDBContainer fluid>
                 <MDBNavbarNav fullWidth={false} className='mb-2 mb-lg-0  d-flex align-items-center'>
-                    <MDBIcon fab icon="edge" style={{fontSize:"1.8rem",marginRight:"20px"}}/>
+                    <NavLink to='/' >
+                        <MDBIcon fab icon="edge" style={{fontSize:"1.8rem",marginRight:"20px"}}/>
+                    </NavLink>  
                     <MDBCollapse navbar open={open} >
                         <MDBNavbarItem className='d-flex  ' >
                             <MDBNavbarLink active aria-current='page' >
@@ -121,10 +123,10 @@ const Header = () => {
          <MDBNavbar dark bgColor='primary' className='fixed-bottom '>
             <MDBContainer fluid className='my-2 mx-4' style={{color:"#fff", fontSize:"1.2rem"}}  >
                 
-              
-                    <MDBIcon fas icon="home" />
-               
-                
+              <NavLink to='/' style={{color:"#fff"}}>
+                <MDBIcon fas icon="home" />
+              </NavLink>
+                 
                 <MDBIcon fas icon="user" />
 
                 <NavLink to='/cart' style={{color:"#fff"}}>
