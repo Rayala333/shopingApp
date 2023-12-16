@@ -1,14 +1,23 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import '../css/Header.css'
 
 import {MDBNavbar,MDBContainer,MDBIcon,MDBNavbarNav,MDBNavbarItem,MDBNavbarToggler,MDBCollapse,
     MDBNavbarLink,MDBBtn,MDBBadge } from 'mdb-react-ui-kit';
 
 import { NavLink } from 'react-router-dom';
+import { useAppDispatch,useAppSelecter } from '../redux/hooks';
+import { getProducts,searchProduct } from '../redux/ProductSlice';
 
 const Header = () => {
 
     const [open, setOpen] = useState<boolean>(false);
+    const [search,setSearch] = useState<string>('')
+
+    const dispatch = useAppDispatch()
+
+    useEffect(()=>{
+        dispatch(searchProduct(search))
+    },[dispatch,search])
     
   return (
         <>
@@ -64,7 +73,7 @@ const Header = () => {
                 
                 <form className='d-flex justify-content-center ' >
                         <input type='search' className='form-control  ' placeholder='Type query' 
-                        aria-label='Search'   />
+                        aria-label='Search' onChange={(e)=>setSearch(e.target.value)}  />
                 </form>
                 
                 <MDBNavbarToggler
