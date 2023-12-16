@@ -118,13 +118,13 @@ const Header = () => {
                 
                 <MDBIcon fas icon="user" />
 
-                
+                <NavLink to='/cart'>
                     <MDBIcon fas icon="cart-arrow-down" >
                         <MDBBadge color='danger' notification pill className='  translate-middle   '>
                             0
                         </MDBBadge>
                     </MDBIcon>
-               
+                </NavLink>
 
             </MDBContainer>
 
