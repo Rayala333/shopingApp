@@ -28,7 +28,7 @@ const Products = () => {
   return (
     <>
     {
-        loading? <h1 style={{display:"flex",justifyContent:"center",height:"100vh"}}>Loading...</h1> :
+        loading? <h1 style={{display:"flex",justifyContent:"center",height:"100vh",alignItems:"center"}}>Loading...</h1> :
         <>
           <div className='d-none d-lg-block d-xl-block d-md-block'>
             <div className='container '>
