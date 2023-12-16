@@ -118,7 +118,7 @@ const Header = () => {
                 
                 <MDBIcon fas icon="user" />
 
-                <NavLink to='/cart'>
+                <NavLink to='/cart' style={{color:"#fff"}}>
                     <MDBIcon fas icon="cart-arrow-down" >
                         <MDBBadge color='danger' notification pill className='  translate-middle   '>
                             0
