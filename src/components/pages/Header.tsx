@@ -29,16 +29,16 @@ const Header = () => {
                     </NavLink>  
                     <MDBCollapse navbar open={open} >
                         <MDBNavbarItem className='d-flex  ' >
-                            <MDBNavbarLink active aria-current='page' >
+                            <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct(""))}>
                                         AllProducts
                             </MDBNavbarLink>
-                            <MDBNavbarLink active aria-current='page' >
+                            <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("electronics"))} >
                                     Electronic
                             </MDBNavbarLink>
-                            <MDBNavbarLink active aria-current='page'  >
+                            <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("men's clothing"))} >
                                     Clothes
                             </MDBNavbarLink>
-                            <MDBNavbarLink active aria-current='page' >
+                            <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("jewelery"))} >
                                     Jewelery
                             </MDBNavbarLink>
                         </MDBNavbarItem>
@@ -95,17 +95,17 @@ const Header = () => {
                     <MDBNavbarNav className='mr-auto m-2 mb-lg-0'>
                         <MDBNavbarItem onClick={()=>setOpen(false)}>
                             
-                                <MDBNavbarLink active aria-current='page'  >
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct(""))} >
                                     AllProducts
                                 </MDBNavbarLink>
                             
-                                <MDBNavbarLink active aria-current='page' >
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("electronics"))}>
                                     Electronics
                                 </MDBNavbarLink>
-                                <MDBNavbarLink active aria-current='page' >
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("men's clothing"))} >
                                     Clothes
                                 </MDBNavbarLink>
-                                <MDBNavbarLink active aria-current='page' >
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("jewelery"))} >
                                     Jewelery
                                 </MDBNavbarLink>
                             
