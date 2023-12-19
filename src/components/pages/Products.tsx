@@ -56,7 +56,7 @@ const Products = () => {
                         <MDBCardBody className='cartbody1'>
                             <MDBCardTitle style={{fontSize:"1rem",height:"35px"}}>{e.title}</MDBCardTitle>
                             <MDBCardTitle style={{fontSize:"0.8rem"}}>${e.price}</MDBCardTitle><hr/>
-                            <MDBCardLink href='#' style={{marginTop:"-20px",textAlign:"center"}} onClick={()=>dispatch(addtoCart(e.id))}>Add To Cart</MDBCardLink>
+                            <MDBCardLink href='#' style={{marginTop:"-20px",textAlign:"center"}} onClick={()=>dispatch(addtoCart(e))}>Add To Cart</MDBCardLink>
                         </MDBCardBody>
                         {/* <MDBCardFooter>
                             <MDBCardLink href='#'>Add To Cart</MDBCardLink>
