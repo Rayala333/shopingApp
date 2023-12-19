@@ -98,17 +98,17 @@ const Header = () => {
                     <MDBNavbarNav className='mr-auto m-2 mb-lg-0'>
                         <MDBNavbarItem onClick={()=>setOpen(false)} >
                             
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct(""))}  style={{color:"#D7CEC7"}}>
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct(""))}  style={{color:"#D7CEC7",cursor:"pointer"}}>
                                     AllProducts
                                 </MDBNavbarLink>
                             
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("electronics"))} style={{color:"#D7CEC7"}}>
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("electronics"))} style={{color:"#D7CEC7",cursor:"pointer"}}>
                                     Electronics
                                 </MDBNavbarLink>
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("men's clothing"))} style={{color:"#D7CEC7"}} >
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("men's clothing"))} style={{color:"#D7CEC7",cursor:"pointer"}} >
                                     Clothes
                                 </MDBNavbarLink>
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("jewelery"))}  style={{color:"#D7CEC7"}}>
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("jewelery"))}  style={{color:"#D7CEC7",cursor:"pointer"}}>
                                     Jewelery
                                 </MDBNavbarLink>
                             
