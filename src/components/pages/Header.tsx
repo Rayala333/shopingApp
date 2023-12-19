@@ -70,7 +70,7 @@ const Header = () => {
 
         <MDBContainer fluid  className='d-block d-sm-block d-md-none w-100 mb-container sticky-top' >
         
-        <MDBNavbar style={{background:"#565656"}} className='sticky-top mb-nav'>
+        <MDBNavbar style={{background:"#76323F"}} className='sticky-top mb-nav'>
             <MDBContainer fluid  >
                 {/* <MDBIcon fas icon="american-sign-language-interpreting"  /> */}
                 {/* <MDBIcon fas icon="cat"    /> */}
@@ -123,7 +123,7 @@ const Header = () => {
         
         {/* //nav footer */}
 
-         <MDBNavbar style={{background:"#565656"}}  className='fixed-bottom '>
+         <MDBNavbar style={{background:"#76323F"}}  className='fixed-bottom '>
             <MDBContainer fluid className='my-2 mx-4' style={{color:"#fff", fontSize:"1.2rem"}}  >
                 
               <NavLink to='/' style={{color:"#fff"}}>
