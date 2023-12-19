@@ -4,10 +4,13 @@ import '../css/Product.css'
 import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardLink} from 'mdb-react-ui-kit';
 import { useAppDispatch,useAppSelecter } from '../redux/hooks';
 import { getProducts,addtoCart } from '../redux/ProductSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Products = () => {
 
     const dispatch = useAppDispatch()
+
+    const navgate = useNavigate()
 
     const products  = useAppSelecter((state)=>state.products)
     const {loading,items,searchData} = products
@@ -56,7 +59,7 @@ const Products = () => {
                         <MDBCardBody className='cartbody1'>
                             <MDBCardTitle style={{fontSize:"1rem",height:"35px"}}>{e.title}</MDBCardTitle>
                             <MDBCardTitle style={{fontSize:"0.8rem"}}>${e.price}</MDBCardTitle><hr/>
-                            <MDBCardLink href='#' style={{marginTop:"-20px",textAlign:"center"}} onClick={()=>dispatch(addtoCart(e))}>Add To Cart</MDBCardLink>
+                            <MDBCardLink href='#' style={{marginTop:"-20px",textAlign:"center"}} onClick={()=>dispatch(addtoCart(e),navgate('/cart'))}>Add To Cart</MDBCardLink>
                         </MDBCardBody>
                         {/* <MDBCardFooter>
                             <MDBCardLink href='#'>Add To Cart</MDBCardLink>
