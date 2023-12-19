@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { useAppDispatch,useAppSelecter } from '../redux/hooks';
+import { useAppSelecter } from '../redux/hooks';
 
 
 const Cart = () => {
-  const dispatch = useAppDispatch()
+  
 
   const products  = useAppSelecter((state)=>state.products)
-  const {loading,cart} = products;
+  const {cart} = products;
 
   console.log(cart,"cart")
 
