@@ -33,11 +33,11 @@ const Products = () => {
     {
         loading? <h1 style={{display:"flex",justifyContent:"center",height:"100vh",alignItems:"center"}}>Loading...</h1> : 
         <>
-          <div className='d-none d-lg-block d-xl-block d-md-block'>
-            <div className='container '>
+          <div className='d-none d-lg-block d-xl-block d-md-block' >
+            <div className='container'>
               {
                 filterData.map((e,i)=>(
-                  <MDBCard className='card' key={i}>
+                  <MDBCard className='Card' key={i}>
                       <MDBCardImage src={e.image} alt='...' position='top'  className='cartimage'/>
                       <MDBCardBody>
                           <MDBCardTitle>Title</MDBCardTitle>
