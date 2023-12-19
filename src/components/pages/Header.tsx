@@ -5,7 +5,7 @@ import {MDBNavbar,MDBContainer,MDBIcon,MDBNavbarNav,MDBNavbarItem,MDBNavbarToggl
     MDBNavbarLink,MDBBtn,MDBBadge } from 'mdb-react-ui-kit';
 
 import { NavLink } from 'react-router-dom';
-import { useAppDispatch} from '../redux/hooks';
+import { useAppDispatch,useAppSelecter} from '../redux/hooks';
 import { searchProduct } from '../redux/ProductSlice';
 
 const Header = () => {
@@ -14,6 +14,9 @@ const Header = () => {
     const [search,setSearch] = useState<string>('')
 
     const dispatch = useAppDispatch()
+
+    const products  = useAppSelecter((state)=>state.products)
+    const {cart} = products;
 
     useEffect(()=>{
         dispatch(searchProduct(search))
@@ -54,7 +57,7 @@ const Header = () => {
                         <MDBIcon fas icon="shopping-basket" size='2x' />
                         
                         <MDBBadge color='danger' notification pill className='position-absolute  top-50  start-75 translate-middle  bg-danger border border-light rounded-circle'>
-                            0
+                            {cart.length}
                             
                         </MDBBadge>
                     </MDBBtn>
@@ -132,7 +135,7 @@ const Header = () => {
                 <NavLink to='/cart' style={{color:"#fff"}}>
                     <MDBIcon fas icon="cart-arrow-down" >
                         <MDBBadge color='danger' notification pill className='  translate-middle   '>
-                            0
+                            {cart.length}
                         </MDBBadge>
                     </MDBIcon>
                 </NavLink>

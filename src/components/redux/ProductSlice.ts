@@ -4,6 +4,9 @@ import {RootState} from './Store'
 
 import axios from 'axios';
 
+const storedCart = localStorage.getItem("cart");
+const initialCart = storedCart ? JSON.parse(storedCart) : [] ;
+
 interface Item {
     id:number;
     title:string;
@@ -26,7 +29,7 @@ const initialState : CounterState = {
     items:[],
     error:null,
     searchData:"",
-    cart:[]
+    cart:[...initialCart]
 }
 
 export const getProducts = createAsyncThunk("getProducts", async()=>{
@@ -56,7 +59,9 @@ export const productSlice = createSlice({
                 state.cart.push(action.payload)
                 // console.log(action.payload)
             }
+            localStorage.setItem("cart", JSON.stringify(state.cart));
         }
+        
     },
     extraReducers:(builder)=>{
         builder.addCase(getProducts.pending,(state)=>{
