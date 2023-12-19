@@ -30,7 +30,7 @@ const initialState : CounterState = {
 }
 
 export const getProducts = createAsyncThunk("getProducts", async()=>{
-    const response = await axios.get('http://localhost:3005/products');
+    const response = await axios.get('https://products-4p5b.onrender.com/products');
     try{
         const result = await response.data 
         // console.log(result,"result")

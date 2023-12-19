@@ -40,7 +40,7 @@ const Products = () => {
                           <MDBCardTitle>Title</MDBCardTitle>
                           <MDBCardText>Cart Text</MDBCardText>
                           <MDBCardLink onClick={()=>dispatch(addtoCart(e))} style={{cursor:"pointer"}}>Add To Cart</MDBCardLink>
-                          <MDBCardLink href='#'>Another link</MDBCardLink>
+                          <MDBCardLink href='#'>BY</MDBCardLink>
                       </MDBCardBody>
                   </MDBCard>
                 ))
