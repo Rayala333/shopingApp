@@ -13,7 +13,7 @@ const Cart = () => {
 
   console.log()
   return (
-    <div>Cart</div>
+    <div>{JSON.stringify(cart)}</div>
   )
 }
 
