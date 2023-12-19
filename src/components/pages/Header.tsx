@@ -70,14 +70,14 @@ const Header = () => {
 
         <MDBContainer fluid  className='d-block d-sm-block d-md-none w-100 mb-container sticky-top' >
         
-        <MDBNavbar style={{background:"#76323F"}} className='sticky-top mb-nav'>
+        <MDBNavbar dark bgColor='primary' className='sticky-top mb-nav'>
             <MDBContainer fluid  >
                 {/* <MDBIcon fas icon="american-sign-language-interpreting"  /> */}
                 {/* <MDBIcon fas icon="cat"    /> */}
-                <MDBIcon fab icon="edge" style={{color:"#D7CEC7",fontSize:"1.8rem"}}   />
+                <MDBIcon fab icon="edge" style={{color:"#fff",fontSize:"1.8rem"}}   />
                 
                 <form className='d-flex justify-content-center ' >
-                        <input type='search' className='form-control  ' placeholder='Type query' style={{background:"#d4c4c4"}}
+                        <input type='search' className='form-control  ' placeholder='Type query' 
                         aria-label='Search' onChange={(e)=>setSearch(e.target.value)}  />
                 </form>
                 
@@ -86,7 +86,7 @@ const Header = () => {
                     aria-expanded='false'
                     aria-label='Toggle navigation'
                     onClick={()=>setOpen(!open)}
-                    style={{marginRight:"-10px",color:"#D7CEC7"}}
+                    style={{marginRight:"-10px",color:"#fff"}}
                 >
                     {
                         !open? <MDBIcon icon='bars' fas /> : <MDBIcon fas icon="times" style={{fontSize:"1.5rem"}} />
@@ -96,19 +96,19 @@ const Header = () => {
 
                 <MDBCollapse navbar open={open}>
                     <MDBNavbarNav className='mr-auto m-2 mb-lg-0'>
-                        <MDBNavbarItem onClick={()=>setOpen(false)} >
+                        <MDBNavbarItem onClick={()=>setOpen(false)}>
                             
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct(""))}  style={{color:"#D7CEC7",cursor:"pointer"}}>
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct(""))} >
                                     AllProducts
                                 </MDBNavbarLink>
                             
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("electronics"))} style={{color:"#D7CEC7",cursor:"pointer"}}>
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("electronics"))}>
                                     Electronics
                                 </MDBNavbarLink>
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("men's clothing"))} style={{color:"#D7CEC7",cursor:"pointer"}} >
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("men's clothing"))} >
                                     Clothes
                                 </MDBNavbarLink>
-                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("jewelery"))}  style={{color:"#D7CEC7",cursor:"pointer"}}>
+                                <MDBNavbarLink active aria-current='page' onClick={()=>dispatch(searchProduct("jewelery"))} >
                                     Jewelery
                                 </MDBNavbarLink>
                             
@@ -123,7 +123,7 @@ const Header = () => {
         
         {/* //nav footer */}
 
-         <MDBNavbar style={{background:"#76323F"}}  className='fixed-bottom '>
+         <MDBNavbar dark bgColor='primary' className='fixed-bottom '>
             <MDBContainer fluid className='my-2 mx-4' style={{color:"#fff", fontSize:"1.2rem"}}  >
                 
               <NavLink to='/' style={{color:"#fff"}}>
@@ -134,7 +134,7 @@ const Header = () => {
 
                 <NavLink to='/cart' style={{color:"#fff"}}>
                     <MDBIcon fas icon="cart-arrow-down" >
-                        <MDBBadge color='danger' notification pill className='  translate-middle   '>
+                        <MDBBadge color='danger' notification pill className='translate-middle '>
                             {cart.length}
                         </MDBBadge>
                     </MDBIcon>
