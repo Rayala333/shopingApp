@@ -27,9 +27,8 @@ const Cart = () => {
   return (
     cart.length <= 0 ? <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"80vh",flexDirection:"column",border:"none"}}>
                           <h3>Cart is empty</h3> 
-                          <hr/>
                           <Link to='/'>
-                          <div className="fa-3x" >
+                          <div className="fa-1x" >
                            <i className="fa-solid fa-circle-plus fa-beat" style={{fontSize:"10px",cursor:"pointer",border:"none"}}> click hear to add productes</i>
                           </div></Link>
                         </div>
@@ -173,10 +172,10 @@ const Cart = () => {
                   <span><strong>${totalPrice}</strong></span>
                 </li>
               </ul>
-  
+              <Link to='/pay'>
               <button type="button" className="btn btn-primary btn-lg btn-block">
                 Go to checkout
-              </button>
+              </button></Link>
             </div>
           </div>
         </div>

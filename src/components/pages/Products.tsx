@@ -42,12 +42,6 @@ const Products = () => {
       ariaLabel="ball-triangle-loading"
       visible={true}
     /></span>
-    
-    
-    
-    
-    
-    
         : 
         <>
           <div className='d-none d-lg-block d-xl-block d-md-block' >
