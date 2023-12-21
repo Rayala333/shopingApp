@@ -6,6 +6,8 @@ import { useAppDispatch,useAppSelecter } from '../redux/hooks';
 import { getProducts,addtoCart } from '../redux/ProductSlice';
 import { useNavigate } from 'react-router-dom';
 
+import { BallTriangle } from  'react-loader-spinner'
+
 const Products = () => {
 
     const dispatch = useAppDispatch()
@@ -31,7 +33,22 @@ const Products = () => {
   return (
     <>
     {
-        loading? <h1 style={{display:"flex",justifyContent:"center",height:"100vh",alignItems:"center"}}>Loading...</h1> : 
+        // loading? <h1 style={{display:"flex",justifyContent:"center",height:"100vh",alignItems:"center"}}>Loading</h1>
+      loading? <span style={{display:"flex",justifyContent:"center",alignItems:"center",height:"80vh"}}> <BallTriangle
+      height={100}
+      width={100}
+      radius={5}
+      color="#3B71CA"
+      ariaLabel="ball-triangle-loading"
+      visible={true}
+    /></span>
+    
+    
+    
+    
+    
+    
+        : 
         <>
           <div className='d-none d-lg-block d-xl-block d-md-block' >
             <div className='container'>
