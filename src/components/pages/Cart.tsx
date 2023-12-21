@@ -172,7 +172,7 @@ const Cart = () => {
                   <span><strong>${totalPrice}</strong></span>
                 </li>
               </ul>
-              <Link to='/pay'>
+              <Link to='/'>
               <button type="button" className="btn btn-primary btn-lg btn-block">
                 Go to checkout
               </button></Link>
