@@ -3,7 +3,7 @@ import '../css/Product.css'
 
 import {MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText,MDBCardLink} from 'mdb-react-ui-kit';
 import { useAppDispatch,useAppSelecter } from '../redux/hooks';
-import { getProducts,addtoCart } from '../redux/ProductSlice';
+import { getProducts,addtoCart} from '../redux/ProductSlice';
 import { useNavigate } from 'react-router-dom';
 
 import { BallTriangle } from  'react-loader-spinner'
