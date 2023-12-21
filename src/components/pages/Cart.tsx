@@ -25,6 +25,15 @@ const Cart = () => {
 
   
   return (
+    cart.length <= 0 ? <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"80vh",flexDirection:"column",border:"none"}}>
+                          <h3>Cart is empty</h3> 
+                          <hr/>
+                          <Link to='/'>
+                          <div className="fa-3x" >
+                           <i className="fa-solid fa-circle-plus fa-beat" style={{fontSize:"10px",cursor:"pointer",border:"none"}}> click hear to add productes</i>
+                          </div></Link>
+                        </div>
+                        :
     <section className="h-100 gradient-custom">
     <div className="container py-2">
       <div className="row d-flex justify-content-center my-4">
@@ -173,8 +182,8 @@ const Cart = () => {
         </div>
       </div>
     </div>
-  </section>
-
+    </section>
+            
   )
 }
 
