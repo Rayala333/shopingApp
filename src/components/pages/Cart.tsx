@@ -3,7 +3,7 @@ import React,{useEffect} from 'react';
 import { useAppSelecter,useAppDispatch } from '../redux/hooks';
 import { removeItem,incrreseItemQuantity,decreaseItemQuantity,getCartTotal} from '../redux/ProductSlice';
 
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // import { FaArrowAltCircleRight } from "react-icons/fa";
 // import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
@@ -31,7 +31,16 @@ const Cart = () => {
         <div className="col-md-8">
           <div className="card mb-4">
             <div className="card-header py-3">
-              <h5 className="mb-0">Cart - {cart.length} items</h5>
+              <div style={{display:"flex",justifyContent:"space-between"}}>
+                <h5 className="mb-0">Cart - {cart.length} items</h5>
+                  <Link to='/'>
+                  <span className="fa-1x">
+                    <i className="fa-solid fa-forward fa-beat"></i> click hear to shop
+                  </span>
+                </Link>
+
+              </div>
+              
             </div>
             <div className="card-body">
               {/* <!-- Single item --> */}
@@ -70,7 +79,8 @@ const Cart = () => {
                   <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
                     {/* <!-- Quantity --> */}
                     <div className="d-flex mb-4" style={{maxWidth: "300px"}}>
-                      <button className="btn btn-primary px-3 me-2" onClick={()=>dispatch(decreaseItemQuantity(e))}>
+                      <button className="btn btn-primary px-3 me-2" onClick={()=>dispatch(decreaseItemQuantity(e))} 
+                                                                  disabled={e.quantity <= 1 ? true : false}>
                         <i className="fas fa-minus"></i>
                       </button>
     
