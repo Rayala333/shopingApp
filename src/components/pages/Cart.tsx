@@ -121,12 +121,12 @@ const Cart = () => {
               {/* <!-- Single item --> */}
             </div>
           </div>
-          <div className="card mb-4">
+          {/* <div className="card mb-4">
             <div className="card-body">
               <p><strong>Expected shipping delivery</strong></p>
               <p className="mb-0">12.10.2020 - 14.10.2020</p>
             </div>
-          </div>
+          </div> */}
           <div className="card mb-4 mb-lg-0">
             <div className="card-body">
               <p><strong>We accept</strong></p>

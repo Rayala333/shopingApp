@@ -65,7 +65,7 @@ const Products = () => {
               <div className='container1'>
                 {
                   filterData.map((e,i)=>(
-                    <MDBCard className='card1' key={i} >
+                    <MDBCard className='card1' key={i}>
                         <MDBCardImage src={e.image} alt='...' position='top'  className='cartimage1'/>
                         <MDBCardBody className='cartbody1'>
                             <MDBCardTitle style={{fontSize:"1rem",height:"35px"}}>{e.title}</MDBCardTitle>
